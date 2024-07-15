@@ -1,6 +1,6 @@
 package model;
 
-public class Movie {
+public class Movie extends Title{
 
 	private String director;
 
