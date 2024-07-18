@@ -3,6 +3,7 @@ package screenmatch;
 import java.util.Scanner;
 
 import model.Movie;
+import model.Serie;
 
 public class Principal {
 
@@ -23,6 +24,10 @@ public class Principal {
 			case 1:
 				Movie userMovie = Movie.getMovieDetailsFromUser(keyboard);
 				userMovie.showTechnicalSheet();
+				break;
+			case 2:
+				Serie userSerie = Serie.getSerieDetailsFromUser(keyboard);
+				userSerie.showTechnicalSheet();
 				break;
 				
 			case 9:
