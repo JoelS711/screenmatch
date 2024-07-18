@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Scanner;
+
 public class Movie extends Title{
 
 	private String director;
@@ -12,21 +14,21 @@ public class Movie extends Title{
 		this.director = director;
 	}
 
-public static Movie getMovieDetailsFromUser() {
+public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         System.out.println("Enter the name of the movie: ");
         String _name = keyboard.nextLine();
         
         System.out.println("Enter the release date: ");
         int _releaseDate = keyboard.nextInt();
-        keyboard.nextLine(); // clear the buffer
+        keyboard.nextLine();
         
         System.out.println("Enter the length of the movie in minutes: ");
         int _durationTime = keyboard.nextInt();
-        keyboard.nextLine(); // clear the buffer
+        keyboard.nextLine();
         
         Movie userMovie = new Movie();
         userMovie.setName(_name);
-        userMovie.setReleaseDate(_releaseDate);
+        userMovie.setRelaseDate(_releaseDate);
         userMovie.setDurationTime(_durationTime);
         
         return userMovie;
@@ -34,4 +36,4 @@ public static Movie getMovieDetailsFromUser() {
 }
 	
 	
-}
+
