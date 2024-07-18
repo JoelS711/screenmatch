@@ -14,6 +14,7 @@ public class Principal {
 			String menu = "Welcome to Screenmatch\n" +
 		              "1. Register new movie\n" +
 		              "2. Register new serie\n" +
+		              "3. Register new documental\n" +
 		              "9. Exit";
 			System.out.println(menu);
 			option = keyboard.nextInt();
