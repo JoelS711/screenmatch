@@ -26,10 +26,15 @@ public class Documental extends Title{
         int _durationTime = keyboard.nextInt();
         keyboard.nextLine();
         
+        System.out.println("Enter dealer name: ");
+        String _distributedBy = keyboard.nextLine();
+        keyboard.nextLine();
+        
         Documental userDocumental = new Documental();
         userDocumental.setName(_name);
         userDocumental.setRelaseDate(_releaseDate);
         userDocumental.setDurationTime(_durationTime);
+        userDocumental.setDistributedBy(_distributedBy);
         
         return userDocumental;
     }
