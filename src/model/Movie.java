@@ -26,10 +26,15 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         int _durationTime = keyboard.nextInt();
         keyboard.nextLine();
         
+        System.out.println("Enter the name of the director: ");
+        String _director = keyboard.nextLine();
+        keyboard.nextLine();
+        
         Movie userMovie = new Movie();
         userMovie.setName(_name);
         userMovie.setRelaseDate(_releaseDate);
         userMovie.setDurationTime(_durationTime);
+        userMovie.setDirector(_director);
         
         return userMovie;
     }
