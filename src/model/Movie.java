@@ -28,7 +28,6 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         
         System.out.println("Enter the name of the director: ");
         String _director = keyboard.nextLine();
-        keyboard.nextLine();
         
         Movie userMovie = new Movie();
         userMovie.setName(_name);
