@@ -72,9 +72,9 @@ public class Title {
 
 	public void showTechnicalSheet() {
 		System.out.println("***FICHA TECNICA***");
-		System.out.println("Name of the title: " + name);
-		System.out.println("Relase date: " + relaseDate);
-		System.out.println("Duration time in minutes: " + getDurationTime());
+		System.out.println("Name of the title: " + this.name);
+		System.out.println("Relase date: " + this.relaseDate);
+		System.out.println("Duration time in minutes: " + this.getDurationTime());
 	}
 	
 }

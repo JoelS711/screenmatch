@@ -38,6 +38,12 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         
         return userMovie;
     }
+
+@Override
+public void showTechnicalSheet() {
+	super.showTechnicalSheet();
+	System.out.println("The name of the director: " + this.getDirector());
+}
 }
 	
 	
