@@ -64,5 +64,13 @@ public class Serie extends Title{
         userSerie.setDurationInMinutesPerEpisode(_durationInMinutesPerEpisode);
         return userSerie;
     }
+	
+	@Override
+	public void showTechnicalSheet() {
+		super.showTechnicalSheet();
+		System.out.println("Number of seasons: " + this.getSeasons());
+		System.out.println("Number of episode per seasons: " + this.getEpisodesPerSeason());
+		System.out.println("Duration in minutes per episode: " + this.getDurationInMinutesPerEpisode());
+	}
 
 }
