@@ -39,4 +39,9 @@ public class Documental extends Title{
         return userDocumental;
     }
 	
+	@Override
+	public void showTechnicalSheet() {
+		super.showTechnicalSheet();
+		System.out.println("Distributed By: " + this.getDistributedBy());
+	}
 }
