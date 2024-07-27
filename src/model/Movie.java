@@ -5,6 +5,17 @@ import java.util.Scanner;
 public class Movie extends Title{
 
 	private String director;
+	private String genre;
+
+	
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 
 	public String getDirector() {
 		return director;
@@ -29,11 +40,15 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         System.out.println("Enter the name of the director: ");
         String _director = keyboard.nextLine();
         
+        System.out.println("Gender: ");
+        String _genre = keyboard.nextLine();
+        
         Movie userMovie = new Movie();
         userMovie.setName(_name);
         userMovie.setRelaseDate(_releaseDate);
         userMovie.setDurationTime(_durationTime);
         userMovie.setDirector(_director);
+        userMovie.setGenre(_genre);
         
         return userMovie;
     }
@@ -42,6 +57,7 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
 public void showTechnicalSheet() {
 	super.showTechnicalSheet();
 	System.out.println("The name of the director: " + this.getDirector());
+	System.out.println("Movie genre: " + this.getGenre());
 }
 }
 	
