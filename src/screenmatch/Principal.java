@@ -3,6 +3,7 @@ package screenmatch;
 import java.util.Scanner;
 
 import model.Movie;
+import model.Serie;
 
 public class Principal {
 
@@ -10,36 +11,28 @@ public class Principal {
 		int option = 0;
 		Scanner keyboard = new Scanner(System.in);
 		while (option != 9) {
-			String menu = """
-					Welcome to Screenmatch
-					1. Register new movie
-					2. Register new serie
-					9. Exit
-					""";
+			String menu = "Welcome to Screenmatch\n" +
+		              "1. Register new movie\n" +
+		              "2. Register new serie\n" +
+		              "3. Register new documental\n" +
+		              "9. Exit";
 			System.out.println(menu);
 			option = keyboard.nextInt();
 			keyboard.nextLine();
 
+			
 			switch (option) {
 			case 1:
-				System.out.println("Enter the name of the movie: ");
-				String name = keyboard.nextLine();
-				System.out.println("Enter the relase date: ");
-				int relaseDate = keyboard.nextInt();
-				keyboard.nextLine();
-				System.out.println("Enter the length of the movie in minutes: ");
-				int durationTime = keyboard.nextInt();
-				keyboard.nextLine();
-
-				Movie userMovie = new Movie();
-				userMovie.setName(name);
-				userMovie.setRelaseDate(relaseDate);
-				userMovie.setDurationTime(durationTime);
+				Movie userMovie = Movie.getMovieDetailsFromUser(keyboard);
 				userMovie.showTechnicalSheet();
+				break;
+			case 2:
+				Serie userSerie = Serie.getSerieDetailsFromUser(keyboard);
+				userSerie.showTechnicalSheet();
 				break;
 				
 			case 9:
-				System.out.println("Saliendo del programa");
+				System.out.println("Leaving the program");
 				break;
 			default:
 				System.out.println("Invalid option");
