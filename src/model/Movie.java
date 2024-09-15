@@ -1,6 +1,8 @@
 package model;
 
-public class Movie extends Title{
+import calculate.Classifiable;
+
+public class Movie extends Title implements Classifiable{
 
 	private String director;
 
@@ -10,6 +12,11 @@ public class Movie extends Title{
 
 	public void setDirector(String director) {
 		this.director = director;
+	}
+
+	@Override
+	public int getClassifiable() {
+		return (int) (average() / 2);
 	}
 	
 	
