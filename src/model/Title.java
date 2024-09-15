@@ -7,9 +7,11 @@ public class Title {
 	private double qualification;
 	private String synopsis;
 	private int durationTime;
+	private double sumOfScores;
+	private double totalScores;
 	
-	
-	
+
+
 	public String getName() {
 		return name;
 	}
@@ -68,6 +70,15 @@ public class Title {
 		this.durationTime = durationTime;
 	}
 
+	public double getSumOfScores() {
+		return sumOfScores;
+	}
+
+
+
+	public double getTotalScores() {
+		return totalScores;
+	}
 
 
 	public void showTechnicalSheet() {
@@ -75,6 +86,15 @@ public class Title {
 		System.out.println("Name of the title: " + name);
 		System.out.println("Relase date: " + relaseDate);
 		System.out.println("Duration time in minutes: " + getDurationTime());
+	}
+	
+	public void evaluate(double score) {
+		sumOfScores += score;
+		totalScores ++;
+	}
+	
+	public double average() {
+		return sumOfScores / totalScores;
 	}
 	
 }
