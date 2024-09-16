@@ -34,6 +34,11 @@ public class Movie extends Title implements Classifiable{
 		return (int) (average() / 2);
 	}
 	
+
+	public Movie(String name, int relaseDate) {
+		super(name, relaseDate);
+	}
+	
 public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         System.out.println("Enter the name of the movie: ");
         String _name = keyboard.nextLine();
@@ -52,7 +57,7 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         System.out.println("Gender: ");
         String _genre = keyboard.nextLine();
         
-        Movie userMovie = new Movie();
+        Movie userMovie = new Movie(_name, _durationTime);
         userMovie.setName(_name);
         userMovie.setRelaseDate(_releaseDate);
         userMovie.setDurationTime(_durationTime);
