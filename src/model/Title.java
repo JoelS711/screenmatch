@@ -80,6 +80,15 @@ public class Title {
 		return totalScores;
 	}
 
+	
+
+	public Title(String name, int relaseDate) {
+		super();
+		this.name = name;
+		this.relaseDate = relaseDate;
+	}
+
+
 
 	public void showTechnicalSheet() {
 		System.out.println("***FICHA TECNICA***");
