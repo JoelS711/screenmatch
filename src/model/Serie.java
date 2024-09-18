@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Serie extends Title{
 	
+	public Serie(String name, int releaseDate) {
+		super(name, releaseDate);
+	}
+
 	private int seasons;
 	private int episodesPerSeason;
 	private int durationInMinutesPerEpisode;
@@ -56,9 +60,9 @@ public class Serie extends Title{
         
   
         
-        Serie userSerie = new Serie();
+        Serie userSerie = new Serie(_name, _releaseDate);
         userSerie.setName(_name);
-        userSerie.setRelaseDate(_releaseDate);
+        userSerie.setReleaseDate(_releaseDate);
         userSerie.setSeasons(_seasons);
         userSerie.setEpisodesPerSeason(_episodesPerSeason);
         userSerie.setDurationInMinutesPerEpisode(_durationInMinutesPerEpisode);
