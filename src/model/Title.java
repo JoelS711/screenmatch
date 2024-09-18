@@ -3,7 +3,7 @@ package model;
 public class Title {
 
 	private String name;
-	private int relaseDate;
+	private int releaseDate;
 	private double qualification;
 	private String synopsis;
 	private int durationTime;
@@ -23,15 +23,14 @@ public class Title {
 	}
 
 
-
-	public int getRelaseDate() {
-		return relaseDate;
+	public int getReleaseDate() {
+		return releaseDate;
 	}
 
 
 
-	public void setRelaseDate(int relaseDate) {
-		this.relaseDate = relaseDate;
+	public void setReleaseDate(int releaseDate) {
+		this.releaseDate = releaseDate;
 	}
 
 
@@ -82,10 +81,10 @@ public class Title {
 
 	
 
-	public Title(String name, int relaseDate) {
+	public Title(String name, int releaseDate) {
 		super();
 		this.name = name;
-		this.relaseDate = relaseDate;
+		this.releaseDate = releaseDate;
 	}
 
 
@@ -93,7 +92,7 @@ public class Title {
 	public void showTechnicalSheet() {
 		System.out.println("***FICHA TECNICA***");
 		System.out.println("Name of the title: " + this.name);
-		System.out.println("Relase date: " + this.relaseDate);
+		System.out.println("Relase date: " + this.releaseDate);
 		System.out.println("Duration time in minutes: " + this.getDurationTime());
 	}
 	

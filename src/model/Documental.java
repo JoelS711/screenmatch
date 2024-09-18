@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Documental extends Title{
 
+	public Documental(String name, int releaseDate) {
+		super(name, releaseDate);
+	}
+
 	private String distributedBy;
 
 	public String getDistributedBy() {
@@ -30,9 +34,9 @@ public class Documental extends Title{
         String _distributedBy = keyboard.nextLine();
         keyboard.nextLine();
         
-        Documental userDocumental = new Documental();
+        Documental userDocumental = new Documental(_name, _releaseDate);
         userDocumental.setName(_name);
-        userDocumental.setRelaseDate(_releaseDate);
+        userDocumental.setReleaseDate(_releaseDate);
         userDocumental.setDurationTime(_durationTime);
         userDocumental.setDistributedBy(_distributedBy);
         
