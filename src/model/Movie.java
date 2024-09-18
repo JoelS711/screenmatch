@@ -59,7 +59,7 @@ public static Movie getMovieDetailsFromUser(Scanner keyboard) {
         
         Movie userMovie = new Movie(_name, _durationTime);
         userMovie.setName(_name);
-        userMovie.setRelaseDate(_releaseDate);
+        userMovie.setReleaseDate(_releaseDate);
         userMovie.setDurationTime(_durationTime);
         userMovie.setDirector(_director);
         userMovie.setGenre(_genre);
