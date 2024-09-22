@@ -9,7 +9,7 @@ public class Title {
 	private int durationTime;
 	private double sumOfScores;
 	private double totalScores;
-	
+
 
 
 	public String getName() {
@@ -79,7 +79,7 @@ public class Title {
 		return totalScores;
 	}
 
-	
+
 
 	public Title(String name, int releaseDate) {
 		super();
@@ -95,14 +95,14 @@ public class Title {
 		System.out.println("Relase date: " + this.releaseDate);
 		System.out.println("Duration time in minutes: " + this.getDurationTime());
 	}
-	
+
 	public void evaluate(double score) {
 		sumOfScores += score;
 		totalScores ++;
 	}
-	
+
 	public double average() {
 		return sumOfScores / totalScores;
 	}
-	
+
 }

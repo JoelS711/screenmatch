@@ -20,7 +20,7 @@ public class Principal {
 			option = keyboard.nextInt();
 			keyboard.nextLine();
 
-			
+
 			switch (option) {
 			case 1:
 				Movie userMovie = Movie.getMovieDetailsFromUser(keyboard);
@@ -30,7 +30,7 @@ public class Principal {
 				Serie userSerie = Serie.getSerieDetailsFromUser(keyboard);
 				userSerie.showTechnicalSheet();
 				break;
-				
+
 			case 9:
 				System.out.println("Leaving the program");
 				break;

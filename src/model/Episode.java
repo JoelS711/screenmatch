@@ -8,7 +8,7 @@ public class Episode implements Classifiable{
 	private String name;
 	private Serie serie;
 	private int totalViews;
-	
+
 	public int getTotalViews() {
 		return totalViews;
 	}
@@ -33,7 +33,7 @@ public class Episode implements Classifiable{
 	public void setSerie(Serie serie) {
 		this.serie = serie;
 	}
-	
+
 	@Override
 	public int getClassifiable() {
 		if(totalViews > 100) {
@@ -42,6 +42,6 @@ public class Episode implements Classifiable{
 			return 2;
 		}
 	}
-	
-	
+
+
 }
