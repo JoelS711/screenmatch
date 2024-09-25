@@ -1,8 +1,12 @@
 package model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title {
 
+	@SerializedName("Title")
 	private String name;
+	@SerializedName("Year")
 	private int releaseDate;
 	private double qualification;
 	private String synopsis;
@@ -104,5 +108,14 @@ public class Title {
 	public double average() {
 		return sumOfScores / totalScores;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "name: " + name + ", releaseDate: " + releaseDate;
+	}
+	
+	
 
 }
