@@ -7,9 +7,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import model.Title;
+import model.TitleOmdb;
 
 public class MainWithSearch {
 
@@ -27,8 +30,10 @@ public class MainWithSearch {
 		String json = response.body();
 		System.out.println(json);
 		
-		Gson gson = new Gson();
-		Title myTitle = gson.fromJson(json, Title.class);
+		Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+		TitleOmdb titleOmdb = gson.fromJson(json, TitleOmdb.class);
+		System.out.println(titleOmdb);
+		Title myTitle = new Title(titleOmdb);
 		System.out.println(myTitle);
 	}
 
