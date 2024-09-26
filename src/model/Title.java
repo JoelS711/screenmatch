@@ -14,60 +14,41 @@ public class Title {
 	private double sumOfScores;
 	private double totalScores;
 
-
-
 	public String getName() {
 		return name;
 	}
-
-
 
 	public void setName(String name) {
 		this.name = name;
 	}
 
-
 	public int getReleaseDate() {
 		return releaseDate;
 	}
-
-
 
 	public void setReleaseDate(int releaseDate) {
 		this.releaseDate = releaseDate;
 	}
 
-
-
 	public double getQualification() {
 		return qualification;
 	}
-
-
 
 	public void setQualification(double qualification) {
 		this.qualification = qualification;
 	}
 
-
-
 	public String getSynopsis() {
 		return synopsis;
 	}
-
-
 
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
 	}
 
-
-
 	public int getDurationTime() {
 		return durationTime;
 	}
-
-
 
 	public void setDurationTime(int durationTime) {
 		this.durationTime = durationTime;
@@ -77,13 +58,9 @@ public class Title {
 		return sumOfScores;
 	}
 
-
-
 	public double getTotalScores() {
 		return totalScores;
 	}
-
-
 
 	public Title(String name, int releaseDate) {
 		super();
@@ -91,7 +68,11 @@ public class Title {
 		this.releaseDate = releaseDate;
 	}
 
-
+	public Title(TitleOmdb titleOmdb) {
+		this.name = titleOmdb.title();
+		this.releaseDate = Integer.valueOf(titleOmdb.year());
+		this.durationTime = Integer.valueOf(titleOmdb.runtime().substring(0, 2));
+	}
 
 	public void showTechnicalSheet() {
 		System.out.println("***FICHA TECNICA***");
@@ -102,20 +83,16 @@ public class Title {
 
 	public void evaluate(double score) {
 		sumOfScores += score;
-		totalScores ++;
+		totalScores++;
 	}
 
 	public double average() {
 		return sumOfScores / totalScores;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "name: " + name + ", releaseDate: " + releaseDate;
+		return "name: " + name + ", releaseDate: " + releaseDate + ", duration: " + durationTime;
 	}
-	
-	
 
 }
