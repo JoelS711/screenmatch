@@ -22,7 +22,7 @@ public class MainWithSearch {
 		var nameMovie = keyboard.nextLine();
 		
 		String url = "http://www.omdbapi.com/?t="+nameMovie+"&apikey=9f0dabfa";
-		
+		try{
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
 		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -34,13 +34,17 @@ public class MainWithSearch {
 		TitleOmdb titleOmdb = gson.fromJson(json, TitleOmdb.class);
 		System.out.println(titleOmdb);
 		
-		try{
+		
 			Title myTitle = new Title(titleOmdb);
 			System.out.println(myTitle);
 			
 		}catch(NumberFormatException e) {
 			System.out.println("Error has ocurred");
 			System.out.println(e.getMessage());
+		}catch(IllegalArgumentException e){
+			System.out.println("URI error, check your address");
+		}catch(Exception e){
+			System.out.println("Unexpected error");
 		}
 		
 		System.out.println("The program has finished");
