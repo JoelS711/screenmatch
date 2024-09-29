@@ -1,14 +1,11 @@
 package model;
 
-import com.google.gson.annotations.SerializedName;
 
 import exception.DurationConversionErrorException;
 
 public class Title {
 
-	@SerializedName("Title")
 	private String name;
-	@SerializedName("Year")
 	private int releaseDate;
 	private double qualification;
 	private String synopsis;
@@ -97,7 +94,7 @@ public class Title {
 
 	@Override
 	public String toString() {
-		return "name: " + name + ", releaseDate: " + releaseDate + ", duration: " + durationTime;
+		return "(name: " + name + ", releaseDate: " + releaseDate + ", duration: " + durationTime+")";
 	}
 
 }
