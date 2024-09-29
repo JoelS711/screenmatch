@@ -2,6 +2,8 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
+import exception.DurationConversionErrorException;
+
 public class Title {
 
 	@SerializedName("Title")
@@ -71,7 +73,10 @@ public class Title {
 	public Title(TitleOmdb titleOmdb) {
 		this.name = titleOmdb.title();
 		this.releaseDate = Integer.valueOf(titleOmdb.year());
-		this.durationTime = Integer.valueOf(titleOmdb.runtime().substring(0, 2));
+		if(titleOmdb.runtime().contains("N/A")) {
+				throw new DurationConversionErrorException("I couldn't convert the duration because it contains an NA");
+		}
+		this.durationTime = Integer.valueOf(titleOmdb.runtime().substring(0, 3).replace(" ", ""));
 	}
 
 	public void showTechnicalSheet() {
