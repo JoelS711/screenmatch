@@ -34,7 +34,6 @@ public class Episode implements Classifiable{
 		this.serie = serie;
 	}
 
-	@Override
 	public int getClassifiable() {
 		if(totalViews > 100) {
 			return 4;

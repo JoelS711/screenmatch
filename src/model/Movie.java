@@ -29,7 +29,7 @@ public class Movie extends Title implements Classifiable{
 		this.director = director;
 	}
 
-	@Override
+	
 	public int getClassifiable() {
 		return (int) (average() / 2);
 	}
